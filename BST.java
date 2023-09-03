@@ -12,6 +12,7 @@ public class BST {
         bin.add(500);
         bin.inorder();
         bin.preorder();
+        bin.postorder();
     }
 
     public void add(int data) {
@@ -56,6 +57,21 @@ public class BST {
             System.out.print(temp.data+" ");
         inorder(temp.left);
         inorder(temp.right);
+    }
+    public void postorder(){
+        if(root!=null){
+            postorder(root.left);
+            postorder(root.right);
+            System.out.print(root.data+" ");
+            System.out.println();
+        }
+    }
+    private void postorder(Node temp){
+        if(temp==null)
+            return;
+        postorder(temp.left);
+        postorder(temp.right);
+            System.out.print(temp.data+" ");
     }
     public void preorder(){
         if(root!=null){
