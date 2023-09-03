@@ -10,8 +10,8 @@ public class BST {
         bin.add(300);
         bin.add(400);
         bin.add(500);
-        bin.preorder();
         bin.inorder();
+        bin.preorder();
     }
 
     public void add(int data) {
