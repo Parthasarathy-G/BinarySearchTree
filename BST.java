@@ -11,6 +11,7 @@ public class BST {
         bin.add(400);
         bin.add(500);
         bin.inorder();
+        bin.preorder();
     }
 
     public void add(int data) {
@@ -43,17 +44,33 @@ public class BST {
     }
     public void inorder(){
         if(root!=null){
-            inorder(root.left);
             System.out.print(root.data+" ");
+            inorder(root.left);
             inorder(root.right);
+            System.out.println();
         }
     }
     private void inorder(Node temp){
         if(temp==null)
             return;
-        inorder(temp.left);
             System.out.print(temp.data+" ");
+        inorder(temp.left);
         inorder(temp.right);
+    }
+    public void preorder(){
+        if(root!=null){
+            preorder(root.left);
+            preorder(root.right);
+            System.out.print(root.data+" ");
+            System.out.println();
+        }
+    }
+    private void preorder(Node temp){
+        if(temp==null)
+            return;
+        preorder(temp.left);
+            System.out.print(temp.data+" ");
+        preorder(temp.right);
     }
 
     class Node {
