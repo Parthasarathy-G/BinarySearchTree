@@ -10,6 +10,7 @@ public class BST {
         bin.add(300);
         bin.add(400);
         bin.add(500);
+        bin.inorder();
     }
 
     public void add(int data) {
@@ -39,6 +40,20 @@ public class BST {
             }
         }
             return temp;
+    }
+    public void inorder(){
+        if(root!=null){
+            inorder(root.left);
+            System.out.print(root.data+" ");
+            inorder(root.right);
+        }
+    }
+    private void inorder(Node temp){
+        if(temp==null)
+            return;
+        inorder(temp.left);
+            System.out.print(temp.data+" ");
+        inorder(temp.right);
     }
 
     class Node {
