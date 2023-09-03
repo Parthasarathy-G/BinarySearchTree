@@ -11,7 +11,7 @@ public class BST {
         bin.add(400);
         bin.add(500);
         bin.inorder();
-        bin.preorder();
+        // bin.preorder();
     }
 
     public void add(int data) {
